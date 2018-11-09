@@ -27,6 +27,7 @@ public class Patient {
 	
 	@ElementCollection
 	private List<File> medicalRecords= new ArrayList<>();
+
 }
 
 //medical history
