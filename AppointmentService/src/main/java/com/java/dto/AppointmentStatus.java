@@ -1,5 +1,6 @@
 package com.java.dto;
 
 public enum AppointmentStatus {
-	BOOKED, CANCELLED, COMPLETE
+	BOOKED, CANCELLED, COMPLETE;
+	
 }
