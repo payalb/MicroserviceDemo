@@ -8,6 +8,7 @@ import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotEmpty;
 
@@ -51,10 +52,12 @@ public class Appointment implements Serializable{
 	@Future
 	private LocalDateTime dateOfAppointment;
 	@NotEmpty
+	@Email
 	private String patientEmailId;
 	@NotEmpty
 	private String clinicAddress;
 	@NotEmpty
+	@Email
 	private String doctorEmailId; 
 	@NotEmpty
 	private String doctorName;

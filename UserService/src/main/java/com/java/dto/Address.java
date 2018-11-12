@@ -1,20 +1,18 @@
 package com.java.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.Embeddable;
 
 import org.hibernate.annotations.DynamicUpdate;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Table(name = "ADDRESS_TABLE")
 @DynamicUpdate
 @Data
-@Entity
+@Embeddable
+@AllArgsConstructor
 public class Address {
-	@Id
-	private long addressId;
+	private int houseNumber;
 	private String addressLine1;
 	private String addressLine2;
 	private String city;
