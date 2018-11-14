@@ -1,10 +1,9 @@
-package com.java.controller;
+/*package com.java.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.BasePathAwareController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.java.dao.UserRepository;
 import com.java.dto.Cart;
@@ -19,3 +18,4 @@ public class UserController {
 		return rep.getCartByUsername(username);
 	}
 }
+*/

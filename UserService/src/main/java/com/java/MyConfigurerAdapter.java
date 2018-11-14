@@ -9,11 +9,18 @@ import org.springframework.http.MediaType;
 public class MyConfigurerAdapter extends RepositoryRestConfigurerAdapter{
 
 	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-		config.setBasePath("/api/v1");
+	//	config.setBasePath("/api/v1");
 		config.setDefaultMediaType(MediaType.APPLICATION_JSON);
 		config.setDefaultPageSize(50);
 	//	config.returnBodyOnCreate("returnBody");
 		//config.returnBodyOnUpdate("returnBody");
 	}
-
+	/*@Override
+	public void configureJacksonObjectMapper(ObjectMapper objectMapper) {
+		SimpleModule module=new SimpleModule("myModule") ;
+		module.addSerializer(User.class, new UserSerializer());
+		module.addDeserializer(User.class, new UserDeserializer());
+		objectMapper.registerModule(module );
+		
+	}*/
 }

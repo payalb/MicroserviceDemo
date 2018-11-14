@@ -2,6 +2,7 @@ package com.java.dto;
 
 import java.util.List;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
 
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Embeddable
 public class Cart {
-	private long userId;
 	@Embedded
+	@ElementCollection
 	private List<Product> products;
 }

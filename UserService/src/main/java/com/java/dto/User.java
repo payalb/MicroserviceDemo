@@ -1,5 +1,6 @@
 package com.java.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.ElementCollection;
@@ -7,6 +8,8 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,23 +21,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Table(name="user_info")
-//@JsonIgnoreProperties(value= {"password", "card"})
 public class User {
+	@JsonProperty(required=true)
 	@Id
 	private String username;
-//	@JsonIgnore
 	private String password;
-//	@JsonIgnore
 	@ElementCollection
-	private List<String> roles;
+	private List<String> roles= new ArrayList<>();
 	@Embedded
-	private List<Address> address;
-	//bytes: @Lob
-	//s3://bucket-demo/doc1.jpg
+	@ElementCollection
+	private List<Address> address= new ArrayList<>();
 	private String pictureUrl;
 	@Embedded
-//	@JsonIgnore
-	private List<CardDetails> card;
+	@ElementCollection
+	private List<CardDetails> card= new ArrayList<>();
 	@Embedded
 	private Cart cart;
 }

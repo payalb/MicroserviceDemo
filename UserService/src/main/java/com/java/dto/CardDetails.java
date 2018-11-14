@@ -18,10 +18,7 @@ import lombok.NoArgsConstructor;
 @Embeddable
 @Data
 @NoArgsConstructor
-//@JsonFilter("protectedFilter")
 @Builder(buildMethodName="build")
-//@JsonSerialize(using=CardSerializer.class)
-//@JsonDeserialize(as=CardDeserializer.class)
 @AllArgsConstructor
 public class CardDetails {
 	private long cardNumber;

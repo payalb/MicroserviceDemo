@@ -6,11 +6,13 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @DynamicUpdate
 @Data
 @Embeddable
 @AllArgsConstructor
+@NoArgsConstructor
 public class Address {
 	private int houseNumber;
 	private String addressLine1;

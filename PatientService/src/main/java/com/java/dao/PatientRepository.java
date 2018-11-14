@@ -8,8 +8,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 
 import com.java.dto.Patient;
-@RepositoryRestResource(path="patients")
-public interface PatientRepository extends JpaRepository<Patient, Integer> {
+@RepositoryRestResource(path="patients", collectionResourceRel="patients")
+public interface PatientRepository extends JpaRepository<Patient, String> {
 	
 	@RestResource(path="firstName")
 	List<Patient> findByFirstName(@Param("name")String firstName);
